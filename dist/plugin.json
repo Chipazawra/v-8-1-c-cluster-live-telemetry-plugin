@@ -1,0 +1,40 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/master/docs/sources/developers/plugins/plugin.schema.json",
+  "type": "datasource",
+  "name": "v8-1c-cluster-live-telemetry-datasource",
+  "id": "chipazawra-v81cclusterlivetelemetry-datasource",
+  "metrics": true,
+  "backend": true,
+  "executable": "gpx_v8-1c-cluster-live-telemetry",
+  "info": {
+    "description": "1c enterprise cluster telemetry live streaming plugin for grafana ",
+    "author": {
+      "name": "Anton",
+      "url": "https://github.com/Chipazawra"
+    },
+    "keywords": [
+      "1c enterprise"
+    ],
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "links": [
+      {
+        "name": "Website",
+        "url": "https://github.com/grafana/grafana-starter-datasource-backend"
+      },
+      {
+        "name": "License",
+        "url": "https://github.com/grafana/grafana-starter-datasource-backend/blob/master/LICENSE"
+      }
+    ],
+    "screenshots": [],
+    "version": "1.0.0",
+    "updated": "2022-01-24"
+  },
+  "dependencies": {
+    "grafanaDependency": ">=7.0.0",
+    "plugins": []
+  }
+}
