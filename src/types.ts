@@ -1,11 +1,11 @@
 import { DataQuery, DataSourceJsonData } from '@grafana/data';
 
 export interface MyQuery extends DataQuery {
-  channel: string
+  channel: string;
 }
 
 export const defaultQuery: Partial<MyQuery> = {
-  channel: "memory"
+  channel: 'memory',
 };
 
 /**

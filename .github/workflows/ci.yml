@@ -67,9 +67,44 @@ jobs:
           version: latest
           args: coverage
 
-      - name: Build backend
+      - name: Build windows
         if: steps.check-for-backend.outputs.has-backend == 'true'
         uses: magefile/mage-action@v1
         with:
           version: latest
-          args: buildAll
+          args: build:windows
+      
+      - name: Build linuxARM64
+        if: steps.check-for-backend.outputs.has-backend == 'true'
+        uses: magefile/mage-action@v1
+        with:
+          version: latest
+          args: build:linuxARM64
+      
+      # - name: Build linuxARM
+      #   if: steps.check-for-backend.outputs.has-backend == 'true'
+      #   uses: magefile/mage-action@v1
+      #   with:
+      #     version: latest
+      #     args: build:linuxARM       
+
+      - name: Build linux
+        if: steps.check-for-backend.outputs.has-backend == 'true'
+        uses: magefile/mage-action@v1
+        with:
+          version: latest
+          args: build:linux
+      
+      - name: Build darwinARM64
+        if: steps.check-for-backend.outputs.has-backend == 'true'
+        uses: magefile/mage-action@v1
+        with:
+          version: latest
+          args: build:darwinARM64    
+
+      - name: Build darwin
+        if: steps.check-for-backend.outputs.has-backend == 'true'
+        uses: magefile/mage-action@v1
+        with:
+          version: latest
+          args: build:darwin    
