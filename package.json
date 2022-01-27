@@ -1,6 +1,6 @@
 {
   "name": "chipazawra-v-8-1-c-cluster-live-telemetry",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "1c enterprise cluster telemetry live streaming plugin for grafana ",
   "scripts": {
     "build": "grafana-toolkit plugin:build",
