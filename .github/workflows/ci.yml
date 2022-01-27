@@ -81,12 +81,12 @@ jobs:
           version: latest
           args: build:linuxARM64
       
-      - name: Build linuxARM
-        if: steps.check-for-backend.outputs.has-backend == 'true'
-        uses: magefile/mage-action@v1
-        with:
-          version: latest
-          args: build:linuxARM       
+      # - name: Build linuxARM
+      #   if: steps.check-for-backend.outputs.has-backend == 'true'
+      #   uses: magefile/mage-action@v1
+      #   with:
+      #     version: latest
+      #     args: build:linuxARM       
 
       - name: Build linux
         if: steps.check-for-backend.outputs.has-backend == 'true'
