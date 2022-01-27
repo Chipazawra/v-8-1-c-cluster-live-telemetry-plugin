@@ -15,4 +15,4 @@ func Hello() {
 }
 
 // Default configures the default target.
-var Default = build.Build.Linux
+var Default = build.BuildAll

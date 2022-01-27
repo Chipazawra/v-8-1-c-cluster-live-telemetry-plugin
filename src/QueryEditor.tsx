@@ -1,5 +1,4 @@
 import { defaults } from 'lodash';
-
 import React, {PureComponent } from 'react';
 import { LegacyForms, InlineField } from '@grafana/ui';
 import { QueryEditorProps, SelectableValue } from '@grafana/data';
@@ -11,7 +10,6 @@ const { Select } = LegacyForms;
 type Props = QueryEditorProps<DataSource, MyQuery, MyDataSourceOptions>;
 
 export class QueryEditor extends PureComponent<Props> {
-  
   onChannelChanged = (sel: SelectableValue<string>) => {
     const { onChange, query , onRunQuery} = this.props;
     onChange({ ...query, channel: sel?.value || ''});

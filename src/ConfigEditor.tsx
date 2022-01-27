@@ -10,7 +10,6 @@ interface Props extends DataSourcePluginOptionsEditorProps<MyDataSourceOptions> 
 interface State {}
 
 export class ConfigEditor extends PureComponent<Props, State> {
- 
   onHostChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { onOptionsChange, options } = this.props;
     const jsonData = {
@@ -96,7 +95,6 @@ export class ConfigEditor extends PureComponent<Props, State> {
 
     return (
       <div className="gf-form-group">
-
         <div className="gf-form">
           <FormField
             label="Host"
