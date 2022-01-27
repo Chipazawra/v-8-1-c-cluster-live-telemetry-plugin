@@ -11,7 +11,7 @@ type Props = QueryEditorProps<DataSource, MyQuery, MyDataSourceOptions>;
 
 export class QueryEditor extends PureComponent<Props> {
   onChannelChanged = (sel: SelectableValue<string>) => {
-    const { onChange, query, onRunQuery} = this.props;
+    const { onChange, query, onRunQuery } = this.props;
     onChange({ ...query, channel: sel?.value || '' });
     // executes the query
     onRunQuery();
