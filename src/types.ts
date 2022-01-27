@@ -5,7 +5,7 @@ export interface MyQuery extends DataQuery {
 }
 
 export const defaultQuery: Partial<MyQuery> = {
-  channel: "memory",
+  channel: 'memory',
 };
 
 /**
