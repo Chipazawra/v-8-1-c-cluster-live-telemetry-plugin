@@ -1,5 +1,5 @@
 import { defaults } from 'lodash';
-import React, {PureComponent } from 'react';
+import React, { PureComponent } from 'react';
 import { LegacyForms, InlineField } from '@grafana/ui';
 import { QueryEditorProps, SelectableValue } from '@grafana/data';
 import { DataSource } from './datasource';
@@ -11,15 +11,15 @@ type Props = QueryEditorProps<DataSource, MyQuery, MyDataSourceOptions>;
 
 export class QueryEditor extends PureComponent<Props> {
   onChannelChanged = (sel: SelectableValue<string>) => {
-    const { onChange, query , onRunQuery} = this.props;
-    onChange({ ...query, channel: sel?.value || ''});
+    const { onChange, query, onRunQuery} = this.props;
+    onChange({ ...query, channel: sel?.value || '' });
     // executes the query
     onRunQuery();
   };
 
   render() {
     const query = defaults(this.props.query, defaultQuery);
-    const {channel} = query;
+    const { channel } = query;
 
     const channels: Array<SelectableValue<string>> = [
       {
@@ -71,7 +71,7 @@ export class QueryEditor extends PureComponent<Props> {
     return (
       <div className="gf-form">
         <InlineField label="Channel" grow={true} labelWidth={8}>
-          <Select 
+          <Select
             options={channels}
             value={currentChannel || ''}
             onChange={this.onChannelChanged}
