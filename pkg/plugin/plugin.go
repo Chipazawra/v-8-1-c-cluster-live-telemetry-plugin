@@ -27,6 +27,7 @@ var (
 	_ backend.QueryDataHandler      = (*Datasource)(nil)
 	_ backend.StreamHandler         = (*Datasource)(nil)
 	_ instancemgmt.InstanceDisposer = (*Datasource)(nil)
+	_ backend.CheckHealthHandler    = (*Datasource)(nil)
 )
 
 type datasourceSettings struct {
@@ -238,4 +239,15 @@ func (d *Datasource) PublishStream(_ context.Context, req *backend.PublishStream
 	return &backend.PublishStreamResponse{
 		Status: backend.PublishStreamStatusPermissionDenied,
 	}, nil
+}
+
+func (d *Datasource) CheckHealth(ctx context.Context, req *backend.CheckHealthRequest) (*backend.CheckHealthResult, error) {
+
+	result := backend.CheckHealthResult{
+		Status:      1,
+		Message:     "CheckHealth: not implemented",
+		JSONDetails: nil,
+	}
+
+	return &result, nil
 }
